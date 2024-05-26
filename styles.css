@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: #ededf3;
+    --background-color: #07070a;
+    --primary-color: #8989e0;
+    --secondary-color: #11118c;
+    --accent-color: #1111fd;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.text-highlight{
+    color: var(--primary-color);
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Urbanist", sans-serif;
+}
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero-section .content{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    background-color: var(--background-color);
+    padding: 5rem;
+    filter: drop-shadow(0 0 4px var(--primary-color));
+}
+
+.hero-section .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1{
+    font-family: "Abril Fatface", cursive;
+    font-size: 3rem;
+}
+
+.hero-section h2{
+    font-size: 2rem;
+}
+
+.list-and-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.list-and-links a{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.proj-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-size: 1.5rem;
+}
