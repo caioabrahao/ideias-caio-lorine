@@ -42,13 +42,20 @@ body{
     height: 100vh;
 }
 
+@keyframes breathing-shadow {
+    0% {filter: drop-shadow(0 0 8px var(--primary-color));}
+    50% {filter: drop-shadow(0 0 16px var(--primary-color));}
+    100% {filter: drop-shadow(0 0 8px var(--primary-color));}
+}
+
 .hero-section .content{
     display: flex;
     flex-direction: row;
     gap: 5rem;
     background-color: var(--background-color);
     padding: 5rem;
-    filter: drop-shadow(0 0 4px var(--primary-color));
+    animation: breathing-shadow 5s infinite;
+
 }
 
 .hero-section .text{
@@ -58,13 +65,64 @@ body{
     align-items: center;
 }
 
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight{
+    from{
+        transform: translateX(-50%);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
 .hero-section h1{
+    animation: fadeIn 1s ease-in-out, slideRight 1s ease-in-out;
     font-family: "Abril Fatface", cursive;
     font-size: 3rem;
 }
 
+@keyframes comesUp {
+    from{
+        transform: translateY(100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
 .hero-section h2{
+    animation: comesUp 1s ease-in-out, fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+    opacity: 0;
     font-size: 2rem;
+}
+
+@keyframes list-and-links-anim {
+    0%{
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+
+    50%{
+        opacity: 0.8;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
 }
 
 .list-and-links{
@@ -72,14 +130,28 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+
+    animation: list-and-links-anim 1s ease-in-out;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .list-and-links a{
-    background-color: var(--primary-color);
-    color: var(--background-color);
+    background-color: rgba(137, 137, 224, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    color: var(--text-color);
     padding: 1rem 2rem;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.list-and-links a:hover{
+    background-color: rgba(17, 17, 140, 0.3);
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 .proj-list{
