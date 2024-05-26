@@ -6,12 +6,14 @@
     box-sizing: border-box;
 }
 
+/*https://www.realtimecolors.com/?colors=0c0c12-f6f6f9-1f1f75-7272ee-0202ed&fonts=Abril%20Fatface-Urbanist*/
+
 :root{
     --text-color: #ededf3;
     --background-color: #07070a;
     --primary-color: #8989e0;
-    --secondary-color: #11118c;
-    --accent-color: #1111fd;
+    --secondary-color: #461698;
+    --accent-color: #923de3;
 }
 
 a{
@@ -48,6 +50,15 @@ body{
     100% {filter: drop-shadow(0 0 8px var(--primary-color));}
 }
 
+@keyframes opening {
+    from{
+
+    }
+    to{
+
+    }
+}
+
 .hero-section .content{
     display: flex;
     flex-direction: row;
@@ -55,7 +66,8 @@ body{
     background-color: var(--background-color);
     padding: 5rem;
     animation: breathing-shadow 5s infinite;
-
+    animation-fill-mode: forwards;
+    
 }
 
 .hero-section .text{
@@ -91,6 +103,16 @@ body{
     font-size: 3rem;
 }
 
+.hero-section h1 span {
+    transition: color 0.2s ease-out, filter 0.2s ease-out;
+    cursor: default;
+}
+
+.hero-section h1 span:hover {
+    color: var(--accent-color);
+    filter: drop-shadow(0 0 8px var(--accent-color));
+}
+
 @keyframes comesUp {
     from{
         transform: translateY(100%);
@@ -108,21 +130,13 @@ body{
     font-size: 2rem;
 }
 
-@keyframes list-and-links-anim {
-    0%{
-        opacity: 0;
-        transform: translateX(-30%);
-    }
+.hero-section h2 a{
+    transition: filter 0.2s ease-in-out;
+}
 
-    50%{
-        opacity: 0.8;
-    }
-
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-
+.hero-section h2 a:hover{
+    text-decoration: none;
+    filter: drop-shadow(0 0 8px var(--accent-color));
 }
 
 .list-and-links{
@@ -131,7 +145,7 @@ body{
     align-items: center;
     gap: 2rem;
 
-    animation: list-and-links-anim 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
     animation-delay: 1.2s;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -160,4 +174,11 @@ body{
     align-items: center;
     list-style: none;
     font-size: 1.5rem;
+}
+
+.vertical-line{
+    width: 1px;
+    height: 100%;
+    border-right: #8989e0 solid 2px;
+    filter: drop-shadow(0 0 4px var(--primary-color));
 }
