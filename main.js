@@ -13,13 +13,26 @@ document.addEventListener("DOMContentLoaded", () => {
 let prevIndex = -1;
 function rotateIdeas(){
     let textHandle = document.getElementById("ideaHandle");
-    const ideasList = ["Criar uma textura de Minecraft",
+    const ideasList = [
+        "Criar uma textura de Minecraft",
         "Abrir uma empresa de Design Gráfico",
         "Criar um mod de Minecraft",
         "Compor uma música",
         "Abrir um canal no Youtube",
         "Programar uma calculadora",
-        "Criar uma pokedéx online"];
+        "Criar uma pokedéx online",
+        "Platinar Deep Rock Galactic",
+        "Criar uma Inteligência Artificial",
+        "Fazer um mochilão na Europa",
+        "Vender arte na praia",
+        "Viajar o mundo de Kombi",
+        "Assistir De volta para o Futuro",
+        "Aprender Pixelart",
+        "Criar um jogo no Unity",
+        "Aprender a usar Godot",
+        "Se mudar para fora do Brasil",
+        "Ir caminhar de baixo da chuva"
+        ];
     
     function getRandomInt(min, max) {
         min = Math.ceil(min);
