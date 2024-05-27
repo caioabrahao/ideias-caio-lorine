@@ -67,7 +67,7 @@ body{
     padding: 5rem;
     animation: breathing-shadow 5s infinite;
     animation-fill-mode: forwards;
-    
+    height: 24rem;
 }
 
 .hero-section .text{
@@ -89,7 +89,7 @@ body{
 
 @keyframes slideRight{
     from{
-        transform: translateX(-50%);
+        transform: translateX(-10%);
     }
 
     to{
@@ -139,11 +139,13 @@ body{
     filter: drop-shadow(0 0 8px var(--accent-color));
 }
 
-.list-and-links{
+.idea-and-links{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
+    width: 28rem;
 
     animation: fadeIn 1s ease-in-out;
     animation-delay: 1.2s;
@@ -151,7 +153,7 @@ body{
     opacity: 0;
 }
 
-.list-and-links a{
+.idea-and-links a{
     background-color: rgba(137, 137, 224, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -162,18 +164,14 @@ body{
     font-weight: bold;
 }
 
-.list-and-links a:hover{
+.idea-and-links a:hover{
     background-color: rgba(17, 17, 140, 0.3);
     color: var(--text-color);
     text-decoration: none;
 }
 
-.proj-list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    font-size: 1.5rem;
+.ideaText{
+    text-align: center;
 }
 
 .vertical-line{
