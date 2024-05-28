@@ -1,15 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const textElement = document.getElementById("hover-text");
-    const text = textElement.innerText;
-    textElement.innerHTML = "";
-
-    text.split("").forEach(letter => {
-        const span = document.createElement("span");
-        span.innerText = letter;
-        textElement.appendChild(span);
-    });
-});
-
 let prevIndex = -1;
 let ideaIndex = -1;
 function rotateIdeas(){
@@ -58,7 +46,7 @@ function rotateIdeas(){
     }, 500);
         textHandle.classList.remove("fadeIn");
 
-        if(ideaIndex < ideasList.length){
+        if(ideaIndex < ideasList.length-1){
             ideaIndex++;
         }else{
             ideaIndex = 0;
@@ -68,8 +56,8 @@ function rotateIdeas(){
 rotateIdeas();
 
 setTimeout(function(){
-    setInterval(rotateIdeas, 3000);
-}, 2000);
+    setInterval(rotateIdeas, 3200);
+}, 500);
 
 function updateFavicon(){
     const faviconLight = './favicon/favicon-light.ico';
