@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let prevIndex = -1;
+let ideaIndex = -1;
 function rotateIdeas(){
     let textHandle = document.getElementById("ideaHandle");
     const ideasList = [
@@ -46,8 +47,8 @@ function rotateIdeas(){
         return newIndex;
     }
 
-    let ideaIndex = getRandomInt(0, ideasList.length - 1);
-    prevIndex = ideaIndex;
+    // let ideaIndex = getRandomInt(0, ideasList.length - 1);
+    // prevIndex = ideaIndex;
     
     textHandle.classList.add("fadeOut");
     setTimeout(function(){
@@ -56,6 +57,12 @@ function rotateIdeas(){
         textHandle.classList.add("fadeIn");
     }, 500);
         textHandle.classList.remove("fadeIn");
+
+        if(ideaIndex < ideasList.length){
+            ideaIndex++;
+        }else{
+            ideaIndex = 0;
+        }
 }
 
 rotateIdeas();
