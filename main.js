@@ -50,7 +50,6 @@ function rotateIdeas(){
     prevIndex = ideaIndex;
     
     textHandle.classList.add("fadeOut");
-
     setTimeout(function(){
         textHandle.textContent = ideasList[ideaIndex];
         textHandle.classList.remove("fadeOut");
