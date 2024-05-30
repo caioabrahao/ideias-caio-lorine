@@ -17,7 +17,7 @@ responsividade e animações para trazer a página a vida. <br><br>
 - **Design Responsivo**: Adaptado para ser bonito em qualquer tipo de tela!
 - **Light/Dark Mode**: Opções de modo claro e noturo detectados automaticamente pelo seu sistema!
 
-## 🛠 Technologies Used
+## 🛠 Tecnologias Usadas
 - **HTML5**: Estruturação de conteúdo.
 - **CSS3**: Estilização e animações.
 - **JavaScript**: Criação de elementos dinâmicos.
@@ -28,5 +28,5 @@ responsividade e animações para trazer a página a vida. <br><br>
     - [LinkedIn](https://www.linkedin.com/in/caioabrahao/)
     - Discord: @zaicoba
 
-<br>
-Made with ❤️ by Caio
+<br><br>
+Feito com ❤️ por Caio
